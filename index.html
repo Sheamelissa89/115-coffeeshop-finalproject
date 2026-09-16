@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Copper & Bean Coffee House offers locally roasted coffee, fresh pastries, and a welcoming neighborhood atmosphere.">
+    <title>Copper & Bean Coffee House</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="#home" class="logo">
+                <span class="logo-icon">☕</span>
+                Copper & Bean
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <p class="eyebrow">Locally roasted. Thoughtfully made.</p>
+                <h1>Good coffee.<br>Brighter days.</h1>
+
+                <p class="hero-description">
+                    Start your day with handcrafted coffee, fresh pastries,
+                    and a warm neighborhood welcome.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#menu" class="button primary-button">Explore Our Menu</a>
+                    <a href="#contact" class="button secondary-button">Visit Our Shop</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section section" id="menu">
+            <div class="section-heading">
+                <p class="eyebrow">Made with care</p>
+                <h2>Customer Favorites</h2>
+                <p>
+                    From rich espresso to freshly baked treats, there is
+                    something here for every part of your day.
+                </p>
+            </div>
+
+            <div class="menu-grid">
+
+                <article class="menu-card">
+                    <div class="card-icon">☕</div>
+                    <h3>Coffee</h3>
+                    <p>Freshly roasted coffee prepared exactly the way you like it.</p>
+
+                    <ul class="menu-list">
+                        <li><span>House Coffee</span><strong>$3.25</strong></li>
+                        <li><span>Café Latte</span><strong>$4.75</strong></li>
+                        <li><span>Caramel Mocha</span><strong>$5.25</strong></li>
+                    </ul>
+                </article>
+
+                <article class="menu-card featured-card">
+                    <div class="card-icon">🧊</div>
+                    <h3>Cold Drinks</h3>
+                    <p>Refreshing handcrafted drinks for warm and busy days.</p>
+
+                    <ul class="menu-list">
+                        <li><span>Cold Brew</span><strong>$4.50</strong></li>
+                        <li><span>Vanilla Iced Latte</span><strong>$5.00</strong></li>
+                        <li><span>Peach Iced Tea</span><strong>$3.75</strong></li>
+                    </ul>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-icon">🥐</div>
+                    <h3>Fresh Food</h3>
+                    <p>Simple, satisfying food baked and prepared fresh each day.</p>
+
+                    <ul class="menu-list">
+                        <li><span>Butter Croissant</span><strong>$3.50</strong></li>
+                        <li><span>Blueberry Muffin</span><strong>$3.75</strong></li>
+                        <li><span>Breakfast Sandwich</span><strong>$6.50</strong></li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="about-section section" id="about">
+            <div class="about-image" role="img" aria-label="Warm cup of coffee on a café table"></div>
+
+            <div class="about-content">
+                <p class="eyebrow">Our story</p>
+                <h2>Your neighborhood coffee shop</h2>
+
+                <p>
+                    Copper & Bean was created as a comfortable place where
+                    neighbors can slow down, connect, and enjoy an excellent
+                    cup of coffee.
+                </p>
+
+                <p>
+                    We proudly serve locally roasted beans and fresh food in a
+                    welcoming space designed for conversation, creativity,
+                    and community.
+                </p>
+
+                <div class="about-features">
+                    <span>✓ Local ingredients</span>
+                    <span>✓ Freshly roasted</span>
+                    <span>✓ Community focused</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section section" id="contact">
+            <div class="contact-information">
+                <p class="eyebrow">Come say hello</p>
+                <h2>Visit Copper & Bean</h2>
+
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <h3>Location</h3>
+                        <p>125 Garden Street<br>Sacramento, CA 95814</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span class="contact-icon">🕒</span>
+                    <div>
+                        <h3>Hours</h3>
+                        <p>Monday–Friday: 6:30 AM–6:00 PM<br>
+                           Saturday–Sunday: 7:00 AM–5:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span class="contact-icon">☎</span>
+                    <div>
+                        <h3>Contact</h3>
+                        <p>(916) 555-0147<br>hello@copperandbean.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+                <h3>Send us a message</h3>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="you@example.com" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" placeholder="How can we help?" required></textarea>
+
+                <button type="submit" class="button primary-button">Send Message</button>
+
+                <p class="form-message" id="form-message"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div>
+            <h2>☕ Copper & Bean</h2>
+            <p>Good coffee. Brighter days.</p>
+        </div>
+
+        <p>&copy; <span id="current-year"></span> Copper & Bean Coffee House.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
