@@ -25,6 +25,7 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#menu">Menu</a></li>
+                <li><a href="#calculator">Tip Calculator</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -102,6 +103,122 @@
 
             </div>
         </section>
+
+        <section class="tip-section section" id="calculator">
+    <div class="tip-introduction">
+        <p class="eyebrow">Make splitting simple</p>
+        <h2>Tip Calculator</h2>
+
+        <p>
+            Enter your bill, choose a tip percentage, and divide the
+            total between everyone at the table.
+        </p>
+
+        <ul class="calculator-benefits">
+            <li>✓ Calculate the tip instantly</li>
+            <li>✓ Split the total between guests</li>
+            <li>✓ Choose a suggested or custom tip</li>
+        </ul>
+    </div>
+
+    <form class="tip-calculator" id="tip-form">
+        <div class="calculator-field">
+            <label for="bill-amount">Bill amount</label>
+
+            <div class="money-input">
+                <span>$</span>
+                <input
+                    type="number"
+                    id="bill-amount"
+                    min="0"
+                    step="0.01"
+                    placeholder="0.00"
+                    required
+                >
+            </div>
+        </div>
+
+        <fieldset class="tip-fieldset">
+            <legend>Choose a tip</legend>
+
+            <div class="tip-options">
+                <button type="button" class="tip-option" data-tip="15">
+                    15%
+                </button>
+
+                <button type="button" class="tip-option active" data-tip="18">
+                    18%
+                </button>
+
+                <button type="button" class="tip-option" data-tip="20">
+                    20%
+                </button>
+
+                <button type="button" class="tip-option" data-tip="25">
+                    25%
+                </button>
+            </div>
+        </fieldset>
+
+        <div class="calculator-field">
+            <label for="custom-tip">Custom tip percentage</label>
+
+            <div class="percentage-input">
+                <input
+                    type="number"
+                    id="custom-tip"
+                    min="0"
+                    max="100"
+                    step="1"
+                    placeholder="Optional"
+                >
+                <span>%</span>
+            </div>
+        </div>
+
+        <div class="calculator-field">
+            <label for="people-count">Number of people</label>
+
+            <input
+                type="number"
+                id="people-count"
+                min="1"
+                step="1"
+                value="1"
+                required
+            >
+        </div>
+
+        <p class="calculator-error" id="calculator-error" aria-live="polite"></p>
+
+        <div class="calculator-actions">
+            <button type="submit" class="button primary-button">
+                Calculate Tip
+            </button>
+
+            <button type="reset" class="button calculator-reset">
+                Reset
+            </button>
+        </div>
+
+        <div class="calculator-results" aria-live="polite">
+            <div>
+                <span>Tip amount</span>
+                <strong id="tip-amount">$0.00</strong>
+            </div>
+
+            <div>
+                <span>Total with tip</span>
+                <strong id="total-amount">$0.00</strong>
+            </div>
+
+            <div class="per-person-result">
+                <span>Amount per person</span>
+                <strong id="per-person">$0.00</strong>
+            </div>
+        </div>
+    </form>
+</section>
 
         <section class="about-section section" id="about">
             <div class="about-image" role="img" aria-label="Warm cup of coffee on a café table"></div>

@@ -313,6 +313,216 @@ img {
     color: var(--copper);
 }
 
+/* ---------- Tip calculator section ---------- */
+
+.tip-section {
+    align-items: center;
+    background: var(--brown);
+    color: var(--white);
+    display: grid;
+    gap: 70px;
+    grid-template-columns: 0.9fr 1.1fr;
+}
+
+.tip-introduction {
+    max-width: 520px;
+}
+
+.tip-introduction .eyebrow {
+    color: #efbd76;
+}
+
+.tip-introduction h2 {
+    color: var(--white);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.tip-introduction > p:not(.eyebrow) {
+    color: #eadfd7;
+    margin-bottom: 28px;
+}
+
+.calculator-benefits {
+    display: grid;
+    gap: 12px;
+    list-style: none;
+}
+
+.calculator-benefits li {
+    color: #f4e9dc;
+    font-weight: 700;
+}
+
+.tip-calculator {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    color: var(--text);
+    padding: 38px;
+}
+
+.calculator-field {
+    margin-bottom: 22px;
+}
+
+.calculator-field label,
+.tip-fieldset legend {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.tip-fieldset {
+    border: 0;
+    margin-bottom: 22px;
+}
+
+.money-input,
+.percentage-input {
+    align-items: center;
+    background: #fffdf9;
+    border: 1px solid #d8caba;
+    border-radius: 7px;
+    display: flex;
+    overflow: hidden;
+}
+
+.money-input:focus-within,
+.percentage-input:focus-within {
+    border-color: var(--copper);
+    box-shadow: 0 0 0 3px rgba(181, 101, 59, 0.14);
+}
+
+.money-input span,
+.percentage-input span {
+    color: var(--copper);
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding: 0 14px;
+}
+
+.money-input input,
+.percentage-input input {
+    background: transparent;
+    border: 0;
+    min-width: 0;
+    outline: none;
+    padding: 13px 14px 13px 0;
+    width: 100%;
+}
+
+.percentage-input input {
+    padding-left: 14px;
+    padding-right: 0;
+}
+
+#people-count {
+    background: #fffdf9;
+    border: 1px solid #d8caba;
+    border-radius: 7px;
+    outline: none;
+    padding: 13px 14px;
+    width: 100%;
+}
+
+#people-count:focus {
+    border-color: var(--copper);
+    box-shadow: 0 0 0 3px rgba(181, 101, 59, 0.14);
+}
+
+.tip-options {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.tip-option {
+    background: var(--cream);
+    border: 2px solid transparent;
+    border-radius: 7px;
+    color: var(--brown);
+    cursor: pointer;
+    font-weight: 800;
+    padding: 11px 8px;
+    transition: 0.2s ease;
+}
+
+.tip-option:hover {
+    border-color: var(--copper);
+}
+
+.tip-option.active {
+    background: var(--copper);
+    color: var(--white);
+}
+
+.calculator-error {
+    color: #a53224;
+    font-size: 0.9rem;
+    font-weight: 700;
+    min-height: 24px;
+}
+
+.calculator-actions {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.calculator-actions .button {
+    flex: 1;
+}
+
+.calculator-reset {
+    background: transparent;
+    border-color: var(--brown);
+    color: var(--brown);
+}
+
+.calculator-reset:hover {
+    background: var(--brown);
+    color: var(--white);
+}
+
+.calculator-results {
+    background: var(--cream);
+    border-radius: 10px;
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+}
+
+.calculator-results div {
+    padding: 20px 14px;
+    text-align: center;
+}
+
+.calculator-results div + div {
+    border-left: 1px solid #dacbbb;
+}
+
+.calculator-results span {
+    color: var(--muted-text);
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.calculator-results strong {
+    color: var(--brown);
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.45rem;
+}
+
+.per-person-result {
+    background: #eadbc6;
+}
 
 /* ---------- About section ---------- */
 
@@ -598,5 +808,42 @@ img {
 
     .about-features span {
         text-align: center;
+    }   
+}
+
+/* ---------- Tip calculator responsiveness ---------- */
+
+@media (max-width: 900px) {
+    .tip-section {
+        grid-template-columns: 1fr;
+    }
+
+    .tip-introduction {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .tip-calculator {
+        padding: 28px 22px;
+    }
+
+    .calculator-results {
+        grid-template-columns: 1fr;
+    }
+
+    .calculator-results div + div {
+        border-left: 0;
+        border-top: 1px solid #dacbbb;
+    }
+}
+
+@media (max-width: 430px) {
+    .tip-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .calculator-actions {
+        flex-direction: column;
     }
 }
